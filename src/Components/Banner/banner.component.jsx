@@ -9,10 +9,10 @@ const Banner = () => {
     <>
     <div className="mainHeader">
           <Link to="/" className='calogo'> Calvin Logo</Link>
-        <Link to='/'>  <div className='passageLogo'></div></Link>
-            <div className='headerText'>This is the Navigation Bar</div>
+       
+            <div className='headerText'></div>
             <div className='spacer'></div>
-            <Link to='/' ><span className='text'>Go to Passage</span></Link>
+            <Link to='/' ><span className='text'>Go to Home</span></Link>
       
     </div>
       <Outlet />

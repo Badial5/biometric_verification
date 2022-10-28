@@ -2,17 +2,36 @@ import { useCurrentUser } from "../../Hooks/userCurrentUser.component";
 
 import "./dashboard.styles.scss"
 
-const Dashboard = () => {
-    const {isLoading, isAuthorized, username} = useCurrentUser();
+
+function Dashboard() {
+    //destructuring
+
+    const {isLoading, isAuthorized,
+         username, first_name, last_name, phone_number,
+        country, date_of_birth} = useCurrentUser();
 
     if (isLoading) {
         return null;
     }
     const authorizedBody = 
     <>
-        You successfully signed into Your dashboard
+        You successfully signed into Your Dashboard using your biometric ID:
+        
         <br/><br/>
+        <p>These are Your details: </p>
+
+        First Name: <b>{first_name}</b> <br />
+        
+        Last Name: <b>{last_name}</b> <br />
+
+        Date of birth: <b>{date_of_birth}</b> <br />
+
+        Your Phone number: <b>{phone_number}</b> <br />
+
+        Country of Origin: <b>{country}</b> <br />
+
         Your email is: <b>{username}</b>
+        
     </>
 
     const unauthorizedBody = 
@@ -24,7 +43,6 @@ const Dashboard = () => {
 
     return (
         <div className='dashboard'>
-          <h1 style={{textAlign: "center"}}>LOGIN SUCCESSFUL</h1>
             <div className='title'>{isAuthorized ? 'Welcome!' : 'Unauthorized'}</div>
             <div className='message'>
                 { isAuthorized ? authorizedBody : unauthorizedBody }

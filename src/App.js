@@ -12,6 +12,7 @@ import "./App.scss"
 
 const App = () => {
   return (
+    <>
     <div>
       <Banner />
       <div className='main-container'>
@@ -26,6 +27,10 @@ const App = () => {
       
 
     </div>
+
+    <Footer />
+
+    </>
   )
 }
 
