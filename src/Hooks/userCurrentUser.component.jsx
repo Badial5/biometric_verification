@@ -10,7 +10,7 @@ export function useCurrentUser() {
         last_name: '',
         date_of_birth: '',
         country: '',
-        phone_number: ''
+        
     });
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export function useCurrentUser() {
                 last_name: userInfo.user_metadata.last_name,
                 date_of_birth: userInfo.user_metadata.date_of_birth,
                 country: userInfo.user_metadata.country,
-                phone_number: userInfo.user_metadata.phone_number
+                
 
             });
         });

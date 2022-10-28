@@ -7,7 +7,7 @@ function Dashboard() {
     //destructuring
 
     const {isLoading, isAuthorized,
-         username, first_name, last_name, phone_number,
+         username, first_name, last_name, 
         country, date_of_birth} = useCurrentUser();
 
     if (isLoading) {
@@ -16,7 +16,7 @@ function Dashboard() {
     const authorizedBody = 
     <>
         You successfully signed into Your Dashboard using your biometric ID:
-        
+
         <br/><br/>
         <p>These are Your details: </p>
 
@@ -26,7 +26,7 @@ function Dashboard() {
 
         Date of birth: <b>{date_of_birth}</b> <br />
 
-        Your Phone number: <b>{phone_number}</b> <br />
+       
 
         Country of Origin: <b>{country}</b> <br />
 
